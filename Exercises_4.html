@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <script>
+        // 1. 2 ədədin fərqini hesablayan function yazın,əgər 1-ci rəqəm ikincidən böyükdürsə.
+
+        // function check(a, b) {
+        //     if (a > b) {
+        //         return a - b;
+        //     } else {
+        //         return "1-ci rəqəm 2-cidən böyük deyil";
+        //     }
+        // }
+        // console.log(check(10, 5));
+        // console.log(check(3, 7));
+
+        // 2. Əgər ədəd cüt ədəddirsə,onun kök altı dəyərini hesablayan function yazın
+
+        // function check(a) {
+        //     if (a % 2 === 0) {
+        //         return Math.sqrt(a);
+        //     } else {
+        //         return "Ədəd cüt deyil";
+        //     }
+        // }
+
+        // console.log(check(16));
+        // console.log(check(9));
+
+        // 3. Ekrandan daxil edilən(promp) data-nın cüt olub olmadığını yoxlayan metod yazın.
+
+        // function check() {
+        //     let a = prompt("Zəhmət olmasa bir ədəd daxil edin:");
+        //     a = Number(a);
+
+        //     if (isNaN(a)) {
+        //         alert("Zəhmət olmasa düzgün ədəd daxil edin.");
+        //     } else if (a % 2 === 0) {
+        //         alert("Daxil etdiyiniz ədəd cütdür.");
+        //     }
+        // }
+
+        // check();
+
+        // 4. Ekrandan daxil edən rəqəmin tipinin Nan olub olmadığını yoxlayan method yazın
+
+        // function check() {
+        //     let a = prompt("Zəhmət olmasa rəqəm əlavə edin:");
+        //     let result = Number(a); // a-nı ədədə çeviririk
+
+        //     if (isNaN(result)) {
+        //         alert("Rəqəmin tipi NaNdır");
+        //     } else {
+        //         alert("Rəqəmin tipi NaN deyil");
+        //     }
+        // }
+
+        // 5. Bir mətndə olan boşluqların sayını hesablayan function yazın.
+
+        // function checkEmty(sentence) {
+        //     return sentence.split(" ").length - 1;
+        // }
+
+        // let sentence = prompt("Mətn daxil edin:");
+        // alert("Boşluqların sayı: " + checkEmty(sentence));
+
+
+        // 6. Əgər mətn mövcuddursa onun icərisindəki , -lərin sayını hesablayan method yazın.
+        // function checkEmty(sentence) {
+        //     return sentence.split(",").length - 1;
+        // }
+
+        // let sentence = prompt("Mətn daxil edin:");
+        // alert("Vergüllərin sayı: " + checkEmty(sentence));
+
+        // 7. Mətnin 2 və 6 -cı indexində olan hissəni kəsib ekrana çıxarın
+        // let sentence = prompt("Zəhmət olmasa bir mətn daxil edin:");
+        // let part = sentence.slice(2, 6);
+        // alert("2 və 6-cı indeks arasındakı hissə: " + part);
+
+        // 8. Mətndəki boşluqların sayına görə bölüb array-ə çevirin.
+        // let sentence = prompt("Zəhmət olmasa bir mətn daxil edin:");
+        // let part = sentence.split(" ");
+        // alert("Array: " + part);
+
+        // 9. Mətnin bütün hərflərini böyük edən bir method yazın
+        // function check() {
+        //     let sentence = prompt("Zəhmət olmasa bir mətn daxil edin:");
+        //     let upperCase = sentence.toUpperCase();
+        //     alert(upperCase);
+        // }
+
+        // check();
+
+        // 10. Mətnin bütün hərflərini kiçik edən bir method yazın
+        //      function check() {
+        //     let sentence = prompt("Zəhmət olmasa bir mətn daxil edin:");
+        //     let lowerCase = sentence.toLowerCase();
+        //     alert(lowerCase);
+        // }
+
+        // check();
+
+        // 11. Bir mətn daxil edin və 4-cü indexdə yerləşən char-ın 'n' hərfi olub olmadığını yoxlayın.
+        // function check() {
+        //     let sentence = prompt("Metn elave edin:")
+        //     if (metn.length > 4) {
+        //         if (sentence.charAt(4) === 'n') {
+        //             alert("4-cü indeksdəki simvol 'n' hərfidir.");
+        //         } else {
+        //             alert("4-cü indeksdəki simvol 'n' deyil");
+        //         }
+        //     } else {
+        //         alert("Metni duz yaz");
+        //     }
+        // }
+
+        // check();
+
+        // 12. Bir array teyin et və sonuncu index-dəki dəyər ilə 1-ci indexdəki dəyərin cəmini başka bir stringdə ekrana çıxar.
+
+        // function arrayList() {
+        //     let arr = [5, 15, 25, 105];
+        //     let first = arr[1];
+        //     let last = arr[arr.length - 1];
+        //     let total = first + last;
+        //     alert(total)
+        // }
+
+        // arrayList();
+
+
+        // 13. Bir array təyin et və sonuncu index-ə 'Salam' deyerini menimset
+        // function arrayAdd() {
+        //     let arr = ["Privet", "Hello"];
+        //     arr.push("Salam");
+
+        //     alert("Array dəyərləri: " + arr);
+        //     console.log(arr);
+        // }
+
+        // arrayAdd();
+
+        // 14. Array təyin et və uzunluğunu hesablayan bir alqorihtm yaz.
+
+        // let arr = [2, 3, 4, 5, 6, 7];
+        // let result = arr.length;
+
+        // alert("arrayin uzunluqu:" + result)
+
+        // 15. Bir mətndəki sözlərin sayını hesablayan alqorithm yaz.
+
+        // let sentence = "Bu metnde nece soz olduqunu say olaraq goster";
+        // let result = sentence.length;
+
+        // alert("Metnde sozlerin sayi: " + result)
+
+
+        // 16. İki random eded teyin et ve onlarin cemini hesablayan alqorithm yaz
+
+        // let numFirst, numSecond;
+
+        // while (true) {
+        //     let first = prompt("Zəhmət olmasa birinci ədədi daxil edin:")
+        //     numFirst = Number(first);
+
+        //     if (!isNaN(numFirst)) {
+        //         break;
+        //     }
+        //     alert("Yalniz eded daxil edin!!!")
+        // }
+
+        // while (true) {
+        //     let second = prompt("Zəhmət olmasa ikinci ədədi daxil edin:")
+        //     numSecond = Number(second);
+
+        //     if (!isNaN(numSecond)) {
+        //         break;
+        //     }
+        //     alert("Yalniz eded daxil edin!!!")
+        // }
+        // let result = numFirst + numSecond;
+        // alert("Ededlerin cemi: " + result)
+
+        // 17. 5-dən 26-ya qədər ədədlərin ədədi ortasını tapıb çap edin
+        // let sum = 0;
+        // let count = 0;
+
+        // for (let i = 5; i <= 26; i++) {
+        //     sum += i;
+        //     count++;
+        // }
+
+        // let total = sum / count;
+
+        // alert("Ədədi orta:" + total);
+
+        // 18. 10 ilə 100 arasındakı ədədlərdən yalnız cüt olanları mətn formatında ekrana çıxarın
+        // let result = "";
+        // for (i = 10; i <= 100; i++) {
+        //     if (i % 2 === 0) {
+        //         result += i + " ";
+        //     }
+        // }
+        // alert("Cüt ədədlər: " + result);
+
+
+        // 19. 0-dan 40-a qədər ədədlər içərisindən 10 a bölünən ədədləri ekrana çıxarın
+        // let result = "";
+
+        // for (let i = 0; i <= 40; i++) {
+        //     if (i % 10 === 0) {
+        //         result += i + " ";
+        //     }
+        // }
+
+        // alert("10-a bölünən ədədlər: " + result);
+
+        // 20. Hər hansı bir ədəd daxil edin və onun 3-ə bölünən olub olmadığını yoxlayan bir alqorithm yazın
+        // let input = prompt("Zəhmət olmasa bir ədəd daxil edin:");
+        // let number = Number(input);
+
+        // if (isNaN(number)) {
+        //     alert("Zəhmət olmasa yalnız ədəd daxil edin!");
+        // } else if (number % 3 === 0) {
+        //     alert("Bu ədəd 3-ə tam bölünür.");
+        // } else {
+        //     alert("Bu ədəd 3-ə tam bölünmür.");
+        // }
+
+        // 21. 30 ilə 40 arasındakı ədədlərin cəmi ilə hasilinin ədədi ortasını tapın
+        // let total= 0;
+        // let hasil = 1;
+
+        // for (let i = 30; i <= 40; i++) {
+        //     total += i;
+        //     hasil *= i;
+        // }
+
+        // let result = (total + hasil) / 2;
+
+        // console.log("Cəm: "+ total);
+        // console.log("Hasil: "+ hasil);
+        // console.log("Ədədi orta: "+ result);
+
+        // 22. 0-dan 100-ə qədər ədədlərdən 10 və ya 70 istisna olmaqla digərlərini ekranda string formasında çap edin, hemcinin stringin uzunlugunu gosterin.
+        // let result = "";
+
+        // for (let i = 0; i <= 100; i++) {
+        //     if (i === 10 || i === 70) {
+        //         continue;
+        //     }
+        //     result += i + " ";
+        // }
+
+        // console.log("Nəticə:", result);
+        // console.log("Uzunluğu:", result.length);
+
+        // 23. 0-dan 100-ə qədər ədədlərdən 20dən kiçik və 50-dən böyük olanların ayrılıqda cəmini hesablayəın
+        // let sum20 = 0;
+        // let sum50 = 0;
+
+        // for (let i = 0; i <= 100; i++) {
+        //     if (i < 20) {
+        //         sum20 += i;
+        //     } else if (i > 50) {
+        //         sum50 += i;
+        //     }
+        // }
+
+        // console.log("20-dən kiçik ədədlərin cəmi:", sum20);
+        // console.log("50-dən böyük ədədlərin cəmi:", sum50);
+
+        // 24. İcerisinde 5 string tipli data olan array teyin edin, ve uzunlugu 5-den yuxari olan datalari baska bir arraya menimsedib ekrana cixarin
+        // let words = ["Pm", "FrontEnd", "BackEnd", "QA", "Devops"];
+        // let wordsLength = [];
+
+        // for (let i = 0; i < words.length; i++) {
+        //     if (words[i].length > 5) {
+        //         wordsLength.push(words[i]);
+        //     }
+        // }
+
+        // console.log("Uzunluğu 5-dən böyük olan sözlər:", wordsLength);
+
+        // 25. Bir metn teyin edin ve icerisinde reqem olub olmadigin i yoxlayin, eger reqem varsa hemin reqemleri baska bir stringe menimsedin,diger metnden ise silin.
+        // let sentence = "Bu gun ayin 17-si May 2025-ci ildir";
+        // let number = "";
+
+        // for (let i = 0; i < sentence.length; i++) {
+        //     if (!isNaN(sentence[i]) && sentence[i] !== " ") {
+        //         number += sentence[i];
+        //     }
+        // }
+        // console.log("Tapılan rəqəmlər: " + number);
+
+        // 26. Bir metn teyin edin ve içerisinde olan "i" hərflərinin hamısını silin
+        // let sentence = "ilanin zeheri cox tehlukelidir";
+        // let result = sentence.replaceAll("i", "");
+        // console.log(result);
+
+        // 27. Ekrandan bir eded daxil edin ve bu ededin palindrom olub olmadigini yoxlayan alqorithm yazin.
+        // let sentence = prompt("Zəhmət olmasa bir ədəd daxil edin:");
+
+        // if (isNaN(sentence)) {
+        //     alert("Zəhmət olmasa YALNIZ ədəd daxil edin!");
+        // } else {
+        //     let reverse = sentence.split("").reverse().join("");
+
+        //     if (sentence === reverse) {
+        //         alert(sentence + " palindrom ədəddir.");
+        //     } else {
+        //         alert(sentence + " palindrom ədəd deyil.");
+        //     }
+        // }
+
+        // 28. Bir deyer gonderen method yazin ve 100-defe ekranda cap edin
+        // function print(some) {
+        //     for (let i = 0; i < 100; i++) {
+        //         console.log((i + 1) + ". " + some);
+        //     }
+        // }
+        // print("Never give up!");
+
+        // 29. Iki array teyin edin ve ikisini bir arraya menimsedib console-da cixarin
+        // let arrFirst = [2, 4, 6];
+        // let arrSecond = [8, 10, 12]
+
+        // let result = arrFirst.concat(arrSecond);
+        // console.log(result)
+
+        // 30. Bir array teyin edin ve icerisinde olan cut ededlerin cemini tapin.
+        // let arr = [5, 12, 8, 7, 4, 3, 10];
+
+        // let sum = 0;
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr[i] % 2 === 0) {
+        //         sum += arr[i];
+        //     }
+        // }
+
+        // console.log("Cüt ədədlərin cəmi:", sum);
+
+    </script>
+</body>
+
+</html>
