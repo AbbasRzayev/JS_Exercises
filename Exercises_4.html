@@ -292,15 +292,15 @@
         // console.log("Uzunluğu 5-dən böyük olan sözlər:", wordsLength);
 
         // 25. Bir metn teyin edin ve icerisinde reqem olub olmadigin i yoxlayin, eger reqem varsa hemin reqemleri baska bir stringe menimsedin,diger metnden ise silin.
-        // let sentence = "Bu gun ayin 17-si May 2025-ci ildir";
-        // let number = "";
+        let sentence = "Bu gun ayin 17-si May 2025-ci ildir";
+        let number = "";
 
-        // for (let i = 0; i < sentence.length; i++) {
-        //     if (!isNaN(sentence[i]) && sentence[i] !== " ") {
-        //         number += sentence[i];
-        //     }
-        // }
-        // console.log("Tapılan rəqəmlər: " + number);
+        for (let i = 0; i < sentence.length; i++) {
+            if (!isNaN(sentence[i]) && sentence[i] !== " ") {
+                number += sentence[i];
+            }
+        }
+        console.log("Tapılan rəqəmlər: " + number);
 
         // 26. Bir metn teyin edin ve içerisinde olan "i" hərflərinin hamısını silin
         // let sentence = "ilanin zeheri cox tehlukelidir";

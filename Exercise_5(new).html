@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+</head>
+
+<body>
+
+    <!-- 1. div tag icerisinde bir metn daxil edin ve metnde olan boşluqların sayını başka bir tag-de ekrana çıxarın -->
+    <!-- 
+    <div id="word"></div>
+    <div id="space-count"></div>
+
+    <script>
+        let sentence = prompt("Mətn əlavə edin:");
+        document.getElementById("word").innerText = "Daxil etdiyiniz mətn: " + sentence;
+
+        let count = 0;
+        for (let i = 0; i < sentence.length; i++) {
+            if (sentence[i] === " ") {
+                count++;
+            }
+        }
+
+        document.getElementById("space-count").innerText = "Boşluqların sayı: " + count;
+    </script> -->
+    <!--  -->
+    <!-- 2. 10 li-den ibaret list yaradin, 5-ci indexden sonra olan elementlerin her birinin kontentine 'Hello I am learning js' textini yazdirin -->
+
+    <!-- <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="ten"></li>
+        <li class="ten"></li>
+        <li class="ten"></li>
+        <li class="ten"></li>
+        <li class="ten"></li>
+    </ul>
+
+    <script>
+        let changeWord = document.getElementsByClassName("ten");
+        for (i = 0; i < changeWord.length; i++) {
+            changeWord[i].innerText = "Hello I am learning js";
+        }
+    </script> -->
+
+    <!-- 3. P tag icerisinde bir metn daxil edin ve metnde olan sozlerin sayini hesablayan method yazin -->
+    <!-- <p>Bu metnde nece soz olduqunu say</p>
+
+    <script>
+        let count = document.getElementsByTagName("p")[0];
+        let text = count.innerText;
+        let words = text.trim().split(/\s+/);
+        let wordCount = words.length;
+        count.innerText += "\nSözlərin sayı: " + wordCount;
+    </script> -->
+
+    <!-- 4. Div tag icerisinde metn daxil edin ve metnde olan butun sozlerin ilk herfini boyuk eden method yazin -->
+    <!-- <div id="uppercase">
+        Bu metini butun sozlerinin ilk herfinin boyuk olmasini temin etmek lazimdir
+    </div>
+
+    <script>
+        let sentence = document.getElementById("uppercase");
+        let words = sentence.innerText;
+        let splitWords = words.trim().split(/\s+/);
+        let capitalizedWords = splitWords.map(function (word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        });
+        let result = capitalizedWords.join(" ");
+        sentence.innerText = result;
+    </script> -->
+
+    <!-- 5. Full ekrani tutan custom menu hazirlayin -->
+    <!-- <body>
+        <div class="fullscreen-menu">
+            <a href="#">Ana Səhifə</a>
+            <a href="#">Haqqımızda</a>
+            <a href="#">Xidmətlər</a>
+            <a href="#">Əlaqə</a>
+        </div>
+    </body> -->
+
+    <!-- 6. Bir list yaradin(html-de) ve listin her li elementine click edende icerisinde yeni a tag yaransin ve icerisine content ve attribut elave edilsin -->
+    <!-- <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+    </ul>
+
+    <script>
+
+        let items = document.getElementsByTagName("li");
+        for (let i = 0; i < items.length; i++) {
+            items[i].onclick = function () {
+                let a = document.createElement("a");
+                a.href = "https://www.tutorialrepublic.com/javascript-tutorial/javascript-dom-manipulation.php";
+                a.innerText = " Linkə keç";
+                a.target = "_blank";
+                this.appendChild(a);
+            };
+        }
+
+    </script> -->
+
+    <!-- 7. Bir list yaradin(html-de) her elemente click edende textin rengini ve font sizini deyisin -->
+    <!-- <ul>
+        <li>First Case</li>
+        <li>Second Case</li>
+        <li>Third Case</li>
+    </ul>
+
+    <script>
+        let getTag = document.getElementsByTagName("li");
+
+        for (let i = 0; i < getTag.length; i++) {
+            getTag[i].onclick = function () {
+                this.style.color = "red";
+                this.style.fontSize = "24px";
+            };
+        }
+    </script> -->
+
+    <!-- 8. Sehife acilanda 10-dan 1-e qeder discount olan bir alqorithm yazin.Meselen ekran acilsin 10 gorunsun sonra 10,9,8,7 .. 1 bu sekilde azalsın -->
+
+    <!-- <div id="countDown" class="count-style">
+    </div>
+
+    <script>
+        let count = 10;
+        let countDownChek = document.getElementById("countDown");
+        countDownCheck = count;
+        let interval = setInterval(() => {
+            count--;
+            countDownChek.textContent = count;
+            if (count <= 1) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    </script> -->
+
+    <!-- 9. js vasitesile htmlde table yaradin, icerisinde 5 setir 4 sutun olsun -->
+    <!-- <div id="tableContainer"></div>
+    <script>
+        const table = document.createElement("table");
+        table.border = "1";
+        for (let i = 0; i < 5; i++) {
+            const row = document.createElement("tr");
+            for (let j = 0; j < 4; j++) {
+                const cell = document.createElement("td");
+                cell.textContent = ` Sütun ${j + 1}`;
+                row.appendChild(cell);
+            }
+
+            table.appendChild(row);
+        }
+        document.getElementById("tableContainer").appendChild(table);
+    </script> -->
+    <!-- 10. bir element yaradin sehife yuklendikden 4 saniye sonra gorunsun 10saniye qalib sonra gizlensin -->
+
+    <!-- <div id="myMessage">Bu mesaj 10 saniyə qalacaq</div>
+
+    <script>
+        window.onload = function () {
+
+            setTimeout(function () {
+                let msg = document.getElementById("myMessage");
+                msg.style.display = "block";
+
+                setTimeout(function () {
+                    msg.style.display = "none";
+                }, 10000);
+            }, 4000);
+        };
+    </script> -->
+
+    <!-- 11. sozlerden ibaret iki array teyin edin, bu arraylerin 4-cu indexindeki deyerlerinin beraber olub olmadigini
+    yoxlayan alqoritm yazin -->
+    <!-- <script>
+        let firstArray = ["Frontend", "Backend", "QA", "Devops", "Pm", "Frontend"];
+        let secondArray = ["Scrum", "Agile", "Sprint", "FrontEnd", "Pm"];
+
+        let firstValue = firstArray[4];
+        let secondValue = secondArray[4];
+
+        if (firstValue === secondValue) {
+            console.log("Dəyərlər bərabərdir.");
+        } else {
+            console.log("Dəyərlər fərqlidir.");
+        }
+    </script> -->
+
+    <!-- 12. iki input(number) daxil edin, change oldugu zaman bu inputlardan gelen deyerlerin cemini hesablayan bir method
+    yazin -->
+
+    <!-- <input type="number" id="num1" placeholder="birinci" class="numFirst">
+    <input type="number" id="num2" placeholder="ikinci" class="numSecond">
+
+    <div id="total" class="total">Cem:</div>
+
+    <script>
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+        let result = document.getElementById("total");
+
+        function sumTotal() {
+            let input1 = Number(num1.value);
+            let input2 = Number(num2.value);
+            let total = input1 + input2;
+            result.textContent = "Cem: " + total;
+        }
+        num1.addEventListener("input", sumTotal);
+        num2.addEventListener("input", sumTotal);
+    </script> -->
+
+    <!-- 13. artan sira ile duzulmus bir metn teyin edin, meselen 1,2,3,4, ..
+    bu ededlerin her birine click edende 2 mislini hesablayib baska bir elementde ekrana cixarin -->
+    <!-- <div class="numbers" id="numbersContainer"></div>
+    <div id="result">Nəticə:</div>
+
+    <script>
+        const container = document.getElementById("numbersContainer");
+        const resultDiv = document.getElementById("result");
+
+
+        for (let i = 1; i <= 10; i++) {
+            let numberSpan = document.createElement("span");
+            numberSpan.textContent = i;
+            numberSpan.addEventListener("click", () => {
+                let doubled = i * 2;
+                resultDiv.textContent = "Nəticə: " + doubled;
+            });
+            container.appendChild(numberSpan);
+        }
+    </script> -->
+
+    <!-- 14. bir array teyin edin arrayin 1-ci indexdeki deyeri ile sonuncu indexdeki deyerini bir variablea menimsedib
+    dom-da cixarin.Her hansi bir tag icerisinde -->
+    <!-- <h2 id="result"></h2>
+
+    <script>
+        let number = [10, 20, 30, 40, 50];
+
+        let sum = number[0] + number[number.length - 1];
+        document.getElementById("result").textContent = sum;
+
+    </script> -->
+
+    <!-- 15. sort() methodunu custom yazin -->
+    <!-- <script>
+        function customSort(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] < arr[i]) {
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        let numbers = [5, 3, 8, 1, 2];
+        console.log(customSort(numbers));
+
+    </script> -->
+    <!-- 16. reverse() methodunu custom yazin(dersde yazdigimiz versiyada yox baska variantda) -->
+    <!-- <script>
+        function customSortReverse(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] > arr[i]) {
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        let numbers = [5, 3, 8, 1, 2];
+        console.log(customSortReverse(numbers));
+    </script> -->
+
+    <!-- 17. pop() methodunu custom yazin -->
+    <!-- <script>
+        function customPop(arr) {
+            let lastElement = arr[arr.length - 1];
+            arr.length = arr.length - 1;
+            return lastElement;
+        }
+        let emptyArr = [10, 20, 30];
+        let popped = customPop(emptyArr);
+        console.log(popped);
+        console.log(emptyArr)
+    </script> -->
+
+    <!-- 18. bir soz daxil edin, herfleri her 1 saniden bir silinsin -->
+    <!-- <p id="textOutput">Never give up</p>
+
+    <script>
+        let output = document.getElementById("textOutput");
+        let fullText = output.innerText;
+        let count = fullText.length;
+        let intervalId = setInterval(() => {
+            output.innerText = fullText.substring(0, count);
+            count--;
+            if (count < 0) {
+                clearInterval(intervalId);
+            }
+        }, 1000);
+    </script> -->
+
+    <!-- 19. bir metn daxil edin sehife acilanda gorunmesin, herfleri her 1 saniyeden sonra ekrana cixsin -->
+    <!-- <p id="textOutput"></p>
+    <script>
+        let count = 0;
+        let fullText = "Vaxt və sağlamlıq";
+        let getText = document.getElementById("textOutput");
+        let showIndex = setInterval(() => {
+            getText.innerText += fullText[count];
+            count++;
+            if (count === fullText.length) {
+                clearInterval(showIndex);
+            }
+        }, 1000);  
+    </script> -->
+
+    <!-- 20. bir img tag daxil edin, button click olanda img alt deyerini ekrana cixaran bir alqorithm yazin -->
+    <!-- <img id="myImage" class="fluid"
+        src="https://plus.unsplash.com/premium_photo-1734543942921-a369a46c6a13?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="testImg">
+    <br>
+    <button onclick="showText()">Show text</button>
+    <p id="output"></p>
+
+    <script>
+        function showText() {
+            let imgElement = document.getElementById("myImage");
+            let altText = imgElement.alt;
+            document.getElementById("output").innerText = altText;
+        }
+    </script> -->
+
+    <!-- 21. 10 il sonraki yasinizi hesablayan bir method yazin
+    <h2>10 il sonra neçə yaşınız olacaq?</h2>
+    <button onclick="showFutureAge()">Hesabla</button>
+    <p id="result"></p>
+
+    <script>
+
+        function calculateAge(currentAge) {
+            let futureAge = currentAge + 10;
+            return futureAge;
+        }
+
+        function showFutureAge() {
+            let ageInput = prompt("Zəhmət olmasa yaşınızı daxil edin:");
+            let currentAge = parseInt(ageInput);
+
+            if (isNaN(currentAge)) {
+                alert("Zəhmət olmasa düzgün yaş daxil edin.");
+                return;
+            }
+
+            let result = calculateAge(currentAge);
+
+            document.getElementById("result").innerText = `10 il sonra sizin yaşınız ${result} olacaq.`;
+        }
+    </script> -->
+
+    <!-- Task1. javascript ile custom accordion yaradin,bootstrapdaki kimi -->
+    <!-- Task2. Javascript ile custom slider -->
+    <!-- Task3. Javascript ile custom menu -->
+
+
+</body>
+
+</html>
